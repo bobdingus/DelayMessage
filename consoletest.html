@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <title>
+         Console Demo
+      </title>
+
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+      <script src="../Console/Console.js">
+      </script>
+   </head>
+
+   <body style="text-align: center">
+      <p>
+      <h2>
+        Console Demo
+      </h2>
+
+      <canvas id="mycanvas">
+      HTML5 canvas element not supported by this browser.
+      </canvas>
+
+      <p>
+      You might have to press the Tab key or click the canvas to give it keyboard focus.
+      </p>
+
+      <script>
+         Console.init("mycanvas", 64, 16);
+         Console.echo(">");
+         function tick()
+         {
+            var line = Console.getLine();
+            if (line != null)
+            {
+               if (line != "")
+                  Console.echo(line+"n");
+               Console.echo(">");
+            }
+         }
+         setInterval("tick()", 50); // Invoke tick() every 50 milliseconds.
+      </script>
+   </body>
+</html>

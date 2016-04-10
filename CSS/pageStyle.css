@@ -16,3 +16,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	width : 10em;
 	height : 2em;
 }
+
+.outbound-message-box{
+	resize : none;
+	width : 40em;
+	height : 20em;
+}

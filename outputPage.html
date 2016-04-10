@@ -1,0 +1,28 @@
+<head>
+<script src="JavaScript/functions.js"></script>
+<script src="JavaScript/MessageField.js"></script>
+<script src="JavaScript/MainPanel.js"></script>
+<script src="JavaScript/OutBoundMessages.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS/pageStyle.css">
+</head>
+<body>
+<div id ="hook"><div>
+<script>
+function update(){
+	var xhr =  new XMLHttpRequest();
+		
+	xhr.open("GET", "getData.php", false);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	xhr.send();	
+	//prompt("Copy to clipboard: Ctrl+C, Enter", xhr.responseText);
+	
+	var hook = document.getElementById("hook");
+	hook.innerHTML = "";
+	hook.innerHTML = xhr.responseText;
+	
+}
+var statusIntervalId = window.setInterval(update, 1000);
+</script>
+
+</body>
