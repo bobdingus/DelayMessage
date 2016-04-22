@@ -1,7 +1,7 @@
 "use strict";
 class MessageField{
 	constructor(row){
-		this.delayMins = 0.1;
+		this.delayMins = delayMins;
 		this.cell = row.insertCell(0);
 		this.div = document.createElement('div');
 		
@@ -48,10 +48,10 @@ class MessageField{
 		var tsStr = "TimeSent="+dateToMysqlFormat(new Date());
 		var postCommand = msgStr + "&" + tcStr + "&" + tsStr;
 		xhr.send(postCommand);
-		if(xhr.responseText !== ""){
-			alert("Error updating");
-			prompt("Copy to clipboard: Ctrl+C, Enter", xhr.responseText);
-		}
+		//if(xhr.responseText !== ""){
+		//	alert("Error updating");
+		//	prompt("Copy to clipboard: Ctrl+C, Enter", xhr.responseText);
+		//}
 		
 	}  
 }

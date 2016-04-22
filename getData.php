@@ -15,7 +15,7 @@ $sql = "SELECT * FROM gamemessages order by TimeSent DESC LIMIT 20";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table>";
+    echo '<table class="output-table">';
 	echo "<thead>";
 	echo "<td>Message</td><td>Time Clicked</td><td>Time Sent</td>";
 	echo "</thead>";
@@ -26,5 +26,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+
 $conn->close();
 ?>

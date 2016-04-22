@@ -6,7 +6,9 @@
 <link rel="stylesheet" type="text/css" href="CSS/pageStyle.css">
 </head>
 <body>
-<div id ="hook"><div>
+<div id ="hook">
+<textarea id = "output-1" style="output-console"></textarea
+<div>
 <script>
 function update(){
 	var xhr =  new XMLHttpRequest();
@@ -22,7 +24,7 @@ function update(){
 	hook.innerHTML = xhr.responseText;
 	
 }
-var statusIntervalId = window.setInterval(update, 1000);
+var statusIntervalId = window.setInterval(update, 3000);
 </script>
 
 </body>

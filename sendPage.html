@@ -6,8 +6,12 @@
 <link rel="stylesheet" type="text/css" href="CSS/pageStyle.css">
 </head>
 <body>
+<div id="delayhook">
+</div>
 <div id ="hook"><div>
 <script>
+var delayMins = 0.1;
+document.getElementById("delayhook").innerHTML = "The current Client side Delay is " + delayMins;
 new MainPanel();
 new OutBoundMessages();
 alert(dateToMysqlFormat(new Date()));
